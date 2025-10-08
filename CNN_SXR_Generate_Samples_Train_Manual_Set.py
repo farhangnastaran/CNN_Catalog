@@ -273,10 +273,10 @@ import time
 start_time = time.time()
 
 # Directory containing merged GOES signal files
-signal_directory = 'directory/Merged_Signals_2018_2025'
+signal_directory = 'directory to files/CNN/Merged_Signals_2018_2025'
 
 # Load selected event metadata
-Event_df = pd.read_csv("directory/Reference_Catalog/selected_events_filtered.csv", parse_dates=["date"])
+Event_df = pd.read_csv("directory to files/Reference_Catalog/selected_events_filtered.csv", parse_dates=["date"])
 
 # Set global reference DataFrame
 global fav_inst_df
@@ -307,7 +307,7 @@ if __name__ == "__main__":
         search_window_size = search_w_size,
         stride = int(search_w_size * frac),
         n_layer = 4,
-        output_file = "directory/Train_set_manual.npz",
+        output_file = "directory to files/Train_set_manual.npz",
         max_workers=20      
     )
 
@@ -321,7 +321,7 @@ if __name__ == "__main__":
         search_window_size = search_w_size,
         stride = int(search_w_size * frac),
         n_layer = 4,
-        output_file = "directory/Test_set_manual.npz",
+        output_file = "directory to files/Test_set_manual.npz",
         max_workers=20      
     )
 

@@ -93,8 +93,7 @@ def safe_process_day(args):
 
 
 def preprocess_all_and_save_parallel(start_date, end_date, signal_directory, search_window_size, stride, output_file, max_workers):
-
-        """
+    """
     Preprocesses GOES signal data across a date range in parallel and saves the results.
 
     Parameters:
@@ -109,13 +108,12 @@ def preprocess_all_and_save_parallel(start_date, end_date, signal_directory, sea
     Returns:
         str: Path to the saved preprocessed output file.
     """
-
     # Ensure integer window and stride values
     search_window_size = int(search_window_size)
     stride = int(stride)
 
     # Generate a list of all dates in the range
-    date_list = [start_date + timedelta(days=i) for i in range((end_date - start_date).days + 1
+    date_list = [start_date + timedelta(days=i) for i in range((end_date - start_date).days + 1)]
 
     # Prepare argument tuples for each date
     args_list = [(date, signal_directory, search_window_size, stride) for date in date_list]
@@ -145,15 +143,12 @@ import time
 start_time = time.time()
 
 # Directory containing merged GOES signal files
-signal_directory = 'directory/Merged_Signals_2018_2025'
+signal_directory = 'directory to files/Merged_Signals_2018_2025'
 
 search_w_size = 600  # Sliding window size
 frac = 0.2           # Fraction for stride calculation
 
-# --- Generate prediction datasets by year ---
-if __name__ == "__main__":
-    from datetime import date
-    
+# --- Generate prediction datasets ---    
 if __name__ == "__main__":
     from datetime import date
     
@@ -163,7 +158,7 @@ if __name__ == "__main__":
         signal_directory = signal_directory,
         search_window_size = search_w_size,
         stride = int(search_w_size * frac),
-        output_file = "directory/Prediction_set_2024.npz",
+        output_file = "directory to files/Prediction_set_2024.npz",
         max_workers=20      
     ) 
     
