@@ -276,7 +276,7 @@ start_time = time.time()
 signal_directory = 'directory/Merged_Signals_2018_2025'
 
 # Load selected event metadata
-Event_df = pd.read_csv("directory/selected_events_filtered.csv", parse_dates=["date"])
+Event_df = pd.read_csv("directory/Reference_Catalog/selected_events_filtered.csv", parse_dates=["date"])
 
 # Set global reference DataFrame
 global fav_inst_df
