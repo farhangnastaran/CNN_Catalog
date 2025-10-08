@@ -30,3 +30,6 @@ Once the datasets are generated, the user has two options:
 
 In either case, the identified events from the prediction sets will be recorded in a CSV file, which includes start times and peak times of the detected events.
 
+A final post-processing step using the "Catalog_Refinement_Plot.ipynb" is recommended. This step refines the raw event detections by ensuring that the start and peak times identified by the CNN align with the local minima and maxima of the signal. It also merges overlapping events occurring within the same rise phase. The script produces: a refined event catalog saved as a CSV file, and plots a signal along with the corresponding detected raw and refined events.
+
+
