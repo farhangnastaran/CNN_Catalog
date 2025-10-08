@@ -1,7 +1,9 @@
 # CNN_Catalog
+
 A CNN-Derived Catalog of Solar Flares from GOES SXR Observations
 
 This repository contains scripts for preprocessing and labeling GOES (Geostationary Operational Environmental Satellites) SXR flux data, generating training, validation, and prediction datasets for solar flare identification.
+
 
 # Repository Structure
 
@@ -15,7 +17,9 @@ Verify_Label_Alignment_Training_Test_Sets_Visualization.ipynb	 --->   Utility no
 
 CNN_Catalog_Manual_4layer_BiLSTM_Trans.ipynb	                 --->   CNN architecture for flare identification.
 
+
 # How to Run
+
 The user should first execute "CNN_SXR_Generate_Samples_Terminal_Execution.ipynb" to generate the training, validation, and prediction datasets.
 The training and validation datasets are constructed based on information recorded in the reference catalog, which includes approximately 7,700 events.
 A selection of GOES SXR signals in CSV format is available in the Merged_Signals_2018_2025 folder and can be used for prediction purposes.
