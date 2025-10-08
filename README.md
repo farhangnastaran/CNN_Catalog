@@ -10,5 +10,14 @@ CNN_SXR_Generate_Samples_Terminal_Execution.ipynb	             --->   Jupyter ve
 Verify_Label_Alignment_Training_Test_Sets_Visualization.ipynb	 --->   Utility notebook for visual inspection and verification of labeled datasets’ temporal alignment.
 CNN_Catalog_Manual_4layer_BiLSTM_Trans.ipynb	                 --->   CNN architecture for flare identification.
 
+# How to Run
+The user should first execute "CNN_SXR_Generate_Samples_Terminal_Execution.ipynb" to generate the training, validation, and prediction datasets.
+The training and validation datasets are constructed based on information recorded in the reference catalog, which includes approximately 7,700 events.
+A selection of GOES SXR signals in CSV format is available in the Merged_Signals_2018_2025 folder and can be used for prediction purposes.
 
+Once the datasets are generated, the user has two options:
+  1) Train the model — Run "CNN_Catalog_Manual_4layer_BiLSTM_Trans.ipynb" to build the CNN model and then execute it for prediction.
+  2) Use the pre-trained model — Load the existing model file "CNN_Model_Manual_4layer_BiLSTM_Trans_Encoder.pt" and directly perform the prediction step.
+
+In either case, the identified events from the prediction sets will be recorded in a CSV file, which includes start times and peak times of the detected events.
 
