@@ -1,6 +1,6 @@
 # CNN_Catalog
 
-A CNN-Derived Catalog of Solar Flares from GOES SXR Observations
+A CNN-Derived Catalog for Solar Flares from GOES SXR Observations
 
 This repository contains scripts for preprocessing and labeling GOES (Geostationary Operational Environmental Satellites) SXR flux data, generating training, validation, and prediction datasets for solar flare identification.
 
