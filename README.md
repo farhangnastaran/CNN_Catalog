@@ -1,4 +1,4 @@
-# CNN_Catalog
+# Solar_Flar_CNN_Catalog
 
 A CNN-Derived Catalog for Solar Flares from GOES SXR Observations
 
